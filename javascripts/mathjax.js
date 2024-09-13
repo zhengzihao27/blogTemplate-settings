@@ -1,9 +1,16 @@
 window.MathJax = {
+    loader: {load: ['[tex]/boldsymbol']},
+
     tex: {
       inlineMath: [["\\(", "\\)"]],
       displayMath: [["\\[", "\\]"]],
       processEscapes: true,
-      processEnvironments: true
+      processEnvironments: true,
+
+      // 自动方程编号
+      tags: 'ams',
+
+      packages: {'[+]': ['boldsymbol']}
     },
     options: {
       ignoreHtmlClass: ".*|",
