@@ -1,0 +1,52 @@
+site_name: 个人笔记
+site_url: https://mydomain.org/mysite
+nav:
+  - 主页: index.md
+  - 论文笔记: 
+      - blog/index.md
+  - 关于我: about.md
+
+theme:
+  name: material
+  features:
+    - navigation.indexes
+  icon:
+    annotation: material/arrow-right-circle 
+
+  
+
+plugins:
+  - search
+  - blog
+
+markdown_extensions:
+
+  # LaTeX、MathML、AsciiMath
+  - pymdownx.arithmatex:
+      generic: true
+
+  # 图片      
+  - attr_list
+  - md_in_html
+
+  # 警告
+  - admonition
+  - pymdownx.details
+
+  # 注解
+  - pymdownx.superfences
+
+  # 数据表
+  - tables
+
+
+  # 列表
+  - def_list
+  - pymdownx.tasklist:
+      custom_checkbox: true
+
+
+
+extra_javascript:
+  - javascripts/mathjax.js
+  - https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js
