@@ -52,3 +52,4 @@ Fire up a browser and go to https://username.github.io.
     git branch -M main 
     git push -u origin main
     git status
+    git remote -v
