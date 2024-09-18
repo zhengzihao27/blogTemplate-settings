@@ -1,19 +1,29 @@
 site_name: 个人笔记
-site_url: https://mydomain.org/mysite
+site_url: https://zhengzihao1998.github.io./
+site_author: zhengzihao
+site_description: 笔记
+copyright: Copyright &copy; 2016 - 2024 Zhengzihao
+
+
+
+
+theme:
+  name: material
+
+  # custom_dir: material/overrides
+  features:
+    - navigation.indexes
+
+
+  icon:
+    annotation: material/arrow-right-circle 
+
 nav:
   - 主页: index.md
   - 论文笔记: 
       - blog/index.md
   - 关于我: about.md
 
-theme:
-  name: material
-  features:
-    - navigation.indexes
-  icon:
-    annotation: material/arrow-right-circle 
-
-  
 
 plugins:
   - search

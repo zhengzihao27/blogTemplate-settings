@@ -42,14 +42,23 @@ Fire up a browser and go to https://username.github.io.
 
     echo "# 1" >> README.md 
     git init 
-    git add README.md      //跟踪文件才能提交
-    git commit -m "第一次提交" 
+    git add README.md           // 使用 git add 命令将工作区中的修改添加到暂存区
+    git commit -m "第一次提交"   // 将暂存区中的修改提交到版本库
     git branch -M main 
     git remote add origin https://github.com/zhengzihao1998/1.git
     git push -u origin main
 
     git remote add origin https://github.com/zhengzihao1998/1.git
     git branch -M main 
-    git push -u origin main
-    git status
-    git remote -v
+    git push -u origin main     // 将本地版本库的提交推送到远程仓库
+
+    git status          // 查看哪些文件在暂存区中
+
+    git remote -v       // 显示所有远程仓库
+
+    git rm -r --cache .
+    git add .           // 将工作区中的所有修改添加到暂存区
+    git commit -m “gitignore working”
+
+
+    
