@@ -59,6 +59,7 @@ Fire up a browser and go to https://username.github.io.
     git rm -r --cache .
     git add .           // 将工作区中的所有修改添加到暂存区
     git commit -m “gitignore working”
+    git push --force origin main    // 本地覆盖远程仓库
 
 
     
