@@ -1,8 +1,6 @@
 ---
 title: 基于强化学习的离散时间均值方差策略
-date:
-  created: 2024-09-13
-  updated: 2024-09-13
+date: 2024-09-18
 categories:
   - 强化学习
 ---
