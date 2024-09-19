@@ -13,6 +13,11 @@ theme:
   # custom_dir: material/overrides
   features:
     - navigation.indexes
+    - navigation.instant
+    - navigation.instant.prefetch
+    - navigation.instant.progress
+  # - navigation.tabs 暂时用不上
+    - navigation.expand
 
 
   icon:
@@ -20,14 +25,17 @@ theme:
 
 nav:
   - 主页: index.md
-  - 论文笔记: 
+  - 笔记: 
       - blog/index.md
   - 关于我: about.md
 
 
 plugins:
-  - search
-  - blog
+  - search:
+      separator: '[\s\u200b\-]'
+  - blog:
+      categories_toc: true
+
 
 markdown_extensions:
 
