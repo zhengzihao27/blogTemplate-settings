@@ -2,6 +2,12 @@ site_name: 个人笔记
 site_url: https://zhengzihao1998.github.io./
 site_author: zhengzihao
 site_description: 笔记
+
+# Repository
+repo_name: zhengzihao27/zhengzihao27.github.io
+repo_url: https://github.com/zhengzihao27/zhengzihao27.github.io
+
+
 copyright: Copyright &copy; 2016 - 2024 Zhengzihao
 
 
@@ -9,20 +15,33 @@ copyright: Copyright &copy; 2016 - 2024 Zhengzihao
 
 theme:
   name: material
-
   # custom_dir: material/overrides
   features:
     - navigation.indexes
     - navigation.instant
-    - navigation.instant.prefetch
     - navigation.instant.progress
     - navigation.tabs
     - navigation.expand
+    - navigation.sections
+    - navigation.footer
+    - navigation.top    # 返回顶部
+    - navigation.tracking
+    - navigation.prune
+
+    - content.tabs.link # 内容选项卡根据其标签进行链接
+    - content.code.copy # 代码复制功能
+    - content.code.select # 代码选中
+    - content.tooltips
+
+    - search.highlight
+    - search.share
+    - search.suggest
+    
+
 
 ######### Color palette toggle #######
 ######### light mode & dark mode #####
   palette: 
-
     - media: "(prefers-color-scheme)"
       toggle:
         icon: material/brightness-auto
@@ -60,6 +79,7 @@ theme:
       bug: octicons/bug-16
       example: octicons/beaker-16
       quote: octicons/quote-16
+    repo: fontawesome/brands/github # 存储库图标
 
 
 nav:
@@ -73,9 +93,19 @@ plugins:
   - search:
       separator: '[\s\u200b\-]'
   - blog:
+      archive_name: Archive
+      archive_toc: false
+      categories_name: Categories
       categories_toc: true
-
-
+      blog_toc: true
+      pagination_per_page: 5
+  - tags
+  - minify:
+      minify_html: true
+  # 显示文档的最后更新和创建日期
+  - git-revision-date-localized:  
+      enable_creation_date: true
+      type: timeago
 
 
 markdown_extensions:
@@ -85,7 +115,7 @@ markdown_extensions:
       generic: true
 
   # 图片      
-  - attr_list
+  - attr_list 
   - md_in_html
 
   # 警告
@@ -116,10 +146,17 @@ markdown_extensions:
       pygments_lang_class: true
   - pymdownx.inlinehilite
   - pymdownx.snippets
+  
 
+  # Content tabs
+  - pymdownx.tabbed:
+      alternate_style: true
 
 
 
 extra_javascript:
   - javascripts/mathjax.js
   - https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js
+
+extra_css:
+  - stylesheets/extra.css
