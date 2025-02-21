@@ -103,9 +103,9 @@ plugins:
   - minify:
       minify_html: true
   # 显示文档的最后更新和创建日期
-  - git-revision-date-localized:  
-      enable_creation_date: true
-      type: timeago
+  # - git-revision-date-localized:  
+  #     enable_creation_date: true
+  #     type: timeago
 
 
 markdown_extensions:

@@ -51,9 +51,12 @@ Windows 是一组由微软开发、经营、销售的图形化操作系统家族
 
 
 
+RL书籍 
 
+Reinforcement Learning: An Introduction  http://incompleteideas.net/book/the-book.html
 
-
+Stochastic Optimal Control: The Discrete-Time Case
+https://web.mit.edu/dimitrib/www/soc.html
 
 
 
